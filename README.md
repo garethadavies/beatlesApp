@@ -3,7 +3,7 @@ beatlesApp
 
 This is a test app that will use the following technologies:
 
-Bootstrap
+<h3>Bootstrap</h3>
 
 HTML & CSS - http://www.initializr.com/
 
