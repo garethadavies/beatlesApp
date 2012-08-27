@@ -3,24 +3,24 @@ beatlesApp
 
 This is a test app that will use the following technologies:
 
-<h3>Bootstrap</h3>
+<h2>Bootstrap</h2>
 
-HTML & CSS - http://www.initializr.com/
+<p>HTML & CSS - http://www.initializr.com/</p>
 
-Data
+<h2>Data</h2>
 
-MySQL - cloud.xeround.com
-iTunes API
+<p>MySQL - cloud.xeround.com<br>
+iTunes API</p>
 
-JavaScript
+<h2>JavaScript</h2>
 
-Backbone - http://backbonejs.org/
-Marionette - https://github.com/derickbailey/backbone.marionette
-Underscore - http://underscorejs.org/
-gRaphael - http://g.raphaeljs.com/
-requireJS - http://requirejs.org/
+<p>Backbone - http://backbonejs.org/<br>
+Marionette - https://github.com/derickbailey/backbone.marionette<br>
+Underscore - http://underscorejs.org/<br>
+gRaphael - http://g.raphaeljs.com/<br>
+requireJS - http://requirejs.org/</p>
 
-Testing
+<h2>Testing</h2>
 
-Jasmine - http://pivotal.github.com/jasmine/
-Sinon.js - http://sinonjs.org/
+<p>Jasmine - http://pivotal.github.com/jasmine/<br>
+Sinon.js - http://sinonjs.org/</p>
