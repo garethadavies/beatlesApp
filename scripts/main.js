@@ -1,40 +1,36 @@
-// Filename: main.js
-
 // Require.js allows us to configure shortcut alias
-// There usage will become more apparent futher along in the tutorial.
 require.config({
+  // The shim config allows us to configure dependencies for
+  // scripts that do not call define() to register a module
+  shim: {
+    'underscore': {
+      exports: '_'
+    },
+    'backbone': {
+      deps: [
+        'underscore',
+        'jquery'
+      ],
+      exports: 'Backbone'
+    }
+  },
   paths: {
     jquery: 'libs/jquery',
     underscore: 'libs/underscore',
-    backbone: 'libs/backbone'
-  },
-  shim: {
-    underscore: {
-      exports: '_'
-    },
-    backbone: {
-      deps: ['libs/jquery', 'libs/underscore'],
-      exports: 'Backbone'
-    },
-    'backbone.marionette': {
-      deps: ['libs/backbone'],
-      exports: 'Backbone'
-    }
+    backbone: 'libs/backbone',
+    text: 'libs/text'
   }
 });
 
 require([
-  // Load our app module and pass it to our definition function
-  'app',
-  // Some plugins have to be loaded in order due to their non AMD compliance
-  // Because these scripts are not "modules" they do not pass any values to the definition function below
-  'order!libs/jquery',
-  'order!libs/underscore',
-  'order!libs/backbone',
-  'order!libs/backbone.marionette'
-],
-function(App){
-  // The "app" dependency is passed in as "App"
-  // Again, the other dependencies passed in are not "AMD" therefore don't pass a parameter to this function
-  App.initialize();
+  'views/app',
+  'routers/router'
+], function(AppView, Workspace) {
+  console.log('first require');
+  // // Initialize routing and start Backbone.history()
+  // new Workspace();
+  // Backbone.history.start();
+
+  // // Initialize the application view
+  // new AppView();
 });

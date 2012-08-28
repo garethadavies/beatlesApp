@@ -1,48 +1,48 @@
-// require.config({
-//   shim: {
-//     underscore: {
-//       exports: '_'
-//     },
-//     backbone: {
-//       deps: ['underscore', 'jquery'],
-//       exports: 'Backbone'
-//     },
-//     'backbone.marionette': {
-//       deps: ['backbone'],
-//       exports: 'Backbone'
-//     }
-//   }
-// });
+require.config({
+	
+	paths: {
+    'backbone': 'libs/backbone',
+    'underscore': 'libs/underscore',
+    'jquery': 'libs/jquery'
+  },
+  shim: {
+    underscore: {
+      exports: '_'
+    },
+    backbone: {
+      deps: ['libs/jquery', 'libs/underscore'],
+      exports: 'Backbone'
+    }
+  }
 
-// require([
-// 	'jquery',
-// 	'backbone',
-// 	'backbone.marionette',
-// 	'order!models/albumModel',
-// 	'order!models/trackModel'
-// ],
-// function($, Backbone, Backbone, Album, Track) {
+});
 
-// 	var Router = Backbone.Router.extend({
+require([
+
+	'libs/jquery'
+
+], function($, _, Backbone) {
+
+	var Router = Backbone.Router.extend({
     
-//     routes: {
-//       '': 'main'
-//     },
+    routes: {
+      '': 'main'
+    },
 
-//     main: function(){
+    main: function(){
 
-//     	console.log('app started');
+    	console.log('app started');
 
-//       // var tasks = new Todo.Collection();
-//       // var view = new MasterView({collection: tasks});
-//       // tasks.fetch({
-//       //   success: function(tasks){
-//       //     $("#container").html(view.render().el).show();
-//       //   }
-//       // });
+      // var tasks = new Todo.Collection();
+      // var view = new MasterView({collection: tasks});
+      // tasks.fetch({
+      //   success: function(tasks){
+      //     $("#container").html(view.render().el).show();
+      //   }
+      // });
 
-//     }
+    }
 
-//   });
+  });
 
-// });
+});
